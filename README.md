@@ -38,3 +38,8 @@ Genutzte Python-Module
 * docx https://python-docx.readthedocs.io/en/latest/ author: Steve Canny
 * pptx https://pypi.org/project/python-pptx/ author: Steve Canny
 * Sphinx http://www.sphinx-doc.org/en/master/ author: Georg Brandl
+
+
+Autor
+=====
+Kai Kohl
