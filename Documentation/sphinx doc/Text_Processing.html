@@ -1,0 +1,459 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Text_Processing package &#8212; Moodle-HTW-DMS prototype documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="setup module" href="setup.html" />
+    <link rel="prev" title="MoodleCrawler package" href="MoodleCrawler.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="setup module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MoodleCrawler.html" title="MoodleCrawler package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="text-processing-package">
+<h1>Text_Processing package<a class="headerlink" href="#text-processing-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Text_Processing.CheckLanguage">
+<span id="text-processing-checklanguage-module"></span><h2>Text_Processing.CheckLanguage module<a class="headerlink" href="#module-Text_Processing.CheckLanguage" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.CheckLanguage.CheckLanguage">
+<em class="property">class </em><code class="descclassname">Text_Processing.CheckLanguage.</code><code class="descname">CheckLanguage</code><a class="headerlink" href="#Text_Processing.CheckLanguage.CheckLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Text_Processing.ICheckLanguage.ICheckLanguage" title="Text_Processing.ICheckLanguage.ICheckLanguage"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text_Processing.ICheckLanguage.ICheckLanguage</span></code></a></p>
+<dl class="method">
+<dt id="Text_Processing.CheckLanguage.CheckLanguage.checkLanguage">
+<code class="descname">checkLanguage</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.CheckLanguage.CheckLanguage.checkLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO The problem is, that nltk needs the language as a full word, like <a href="#id1"><span class="problematic" id="id2">*</span></a>german’. The used framework would return “de” so every language has to be translate in the whole word</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.FileToText">
+<span id="text-processing-filetotext-module"></span><h2>Text_Processing.FileToText module<a class="headerlink" href="#module-Text_Processing.FileToText" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.FileToText.FileToText">
+<em class="property">class </em><code class="descclassname">Text_Processing.FileToText.</code><code class="descname">FileToText</code><a class="headerlink" href="#Text_Processing.FileToText.FileToText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Text_Processing.IFileToText.IFileToText" title="Text_Processing.IFileToText.IFileToText"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text_Processing.IFileToText.IFileToText</span></code></a></p>
+<dl class="method">
+<dt id="Text_Processing.FileToText.FileToText.fileToText">
+<code class="descname">fileToText</code><span class="sig-paren">(</span><em>filePath</em>, <em>datatype</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.FileToText.FileToText.fileToText" title="Permalink to this definition">¶</a></dt>
+<dd><p>fileToText take the path to a file and the associated data type. Then it read the text from the file
+and return the text. If the datatype is not supported return an empty string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filePath</strong> – The path to the file</td>
+</tr>
+</tbody>
+</table>
+<p>:param datatype The data type of the file
+:return the text of the file, if the datatype is not supported the text is empty
+:raise ExceptionReadDataToText if an problem pop up</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.ICheckLanguage">
+<span id="text-processing-ichecklanguage-module"></span><h2>Text_Processing.ICheckLanguage module<a class="headerlink" href="#module-Text_Processing.ICheckLanguage" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.ICheckLanguage.ICheckLanguage">
+<em class="property">class </em><code class="descclassname">Text_Processing.ICheckLanguage.</code><code class="descname">ICheckLanguage</code><a class="headerlink" href="#Text_Processing.ICheckLanguage.ICheckLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>CheckLanguage is for the classification of a text in which language it is written</p>
+<dl class="method">
+<dt id="Text_Processing.ICheckLanguage.ICheckLanguage.checkLanguage">
+<code class="descname">checkLanguage</code><span class="sig-paren">(</span><em>text: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#Text_Processing.ICheckLanguage.ICheckLanguage.checkLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>checkLanguage return the language of a text</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param text:</th><td class="field-body">The text, which shall be classified</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a string, which represent the language
+:raise ExceptionCheckLanguage if a problem pop up</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.IFileToText">
+<span id="text-processing-ifiletotext-module"></span><h2>Text_Processing.IFileToText module<a class="headerlink" href="#module-Text_Processing.IFileToText" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.IFileToText.IFileToText">
+<em class="property">class </em><code class="descclassname">Text_Processing.IFileToText.</code><code class="descname">IFileToText</code><a class="headerlink" href="#Text_Processing.IFileToText.IFileToText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>FileToText is for read the text out of a file.”</p>
+<dl class="method">
+<dt id="Text_Processing.IFileToText.IFileToText.fileToText">
+<code class="descname">fileToText</code><span class="sig-paren">(</span><em>filePath: str</em>, <em>datatype: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#Text_Processing.IFileToText.IFileToText.fileToText" title="Permalink to this definition">¶</a></dt>
+<dd><p>fileToText take the path to a file and the associated data type. Then it read the text from the file
+and return the text. If the datatype is not supported return an empty string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filePath</strong> – The path to the file</td>
+</tr>
+</tbody>
+</table>
+<p>:param datatype The data type of the file
+:return the text of the file, if the datatype is not supported the text is empty
+:raise ExceptionReadDataToText if an problem pop up</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.ITextAbstraction">
+<span id="text-processing-itextabstraction-module"></span><h2>Text_Processing.ITextAbstraction module<a class="headerlink" href="#module-Text_Processing.ITextAbstraction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.ITextAbstraction.ITextAbstraction">
+<em class="property">class </em><code class="descclassname">Text_Processing.ITextAbstraction.</code><code class="descname">ITextAbstraction</code><a class="headerlink" href="#Text_Processing.ITextAbstraction.ITextAbstraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt>The TextAbstraction is for the summarization of texts.</dt>
+<dd><dl class="first last docutils">
+<dt>The functions are:</dt>
+<dd><ul class="first last simple">
+<li>summarize_Text for summarize a text</li>
+<li>frequency_Words returns the occurs of words in text</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="Text_Processing.ITextAbstraction.ITextAbstraction.frequency_Words">
+<code class="descname">frequency_Words</code><span class="sig-paren">(</span><em>text: str</em>, <em>n: int</em>, <em>language: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#Text_Processing.ITextAbstraction.ITextAbstraction.frequency_Words" title="Permalink to this definition">¶</a></dt>
+<dd><p>frequency_Words compute the frequency of each word in text and give the n words with the highest pop up back
+as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> – The text for which the n highest words shall be extract</li>
+<li><strong>n</strong> – number of words which shall be extract</li>
+<li><strong>language</strong> – The language of the text</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Returns a String, where each row contains the word and how often it occurs</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ExceptionTextAbstraction: When n &lt; number of words in text</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Text_Processing.ITextAbstraction.ITextAbstraction.summarize_Text">
+<code class="descname">summarize_Text</code><span class="sig-paren">(</span><em>text: str</em>, <em>n: int</em>, <em>language: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#Text_Processing.ITextAbstraction.ITextAbstraction.summarize_Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>summarize_Text return a text with n main sentences of the input text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> – The text, which shall be summarized</li>
+<li><strong>n</strong> – Number of sentences, which shall be used</li>
+<li><strong>language</strong> – The language of the text</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return Return the abstract text
+:raise ExceptionTextAbstraction: When n &lt; number of sentences in text</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.ITextCleaner">
+<span id="text-processing-itextcleaner-module"></span><h2>Text_Processing.ITextCleaner module<a class="headerlink" href="#module-Text_Processing.ITextCleaner" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.ITextCleaner.ITextCleaner">
+<em class="property">class </em><code class="descclassname">Text_Processing.ITextCleaner.</code><code class="descname">ITextCleaner</code><a class="headerlink" href="#Text_Processing.ITextCleaner.ITextCleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ITextCleaner is for the cleaning of texts.</p>
+<dl class="method">
+<dt id="Text_Processing.ITextCleaner.ITextCleaner.cleaningText">
+<code class="descname">cleaningText</code><span class="sig-paren">(</span><em>text: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#Text_Processing.ITextCleaner.ITextCleaner.cleaningText" title="Permalink to this definition">¶</a></dt>
+<dd><p>cleaningText return the text in a clean version. No links, multiple lines etc.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param text:</th><td class="field-body">The text, which shall be cleaned</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a string, which is cleaned</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.TextAbstraction">
+<span id="text-processing-textabstraction-module"></span><h2>Text_Processing.TextAbstraction module<a class="headerlink" href="#module-Text_Processing.TextAbstraction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.TextAbstraction.TextAbstraction">
+<em class="property">class </em><code class="descclassname">Text_Processing.TextAbstraction.</code><code class="descname">TextAbstraction</code><span class="sig-paren">(</span><em>database: DB.IDatabaseManager.IDatabaseManager</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextAbstraction.TextAbstraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Text_Processing.ITextAbstraction.ITextAbstraction" title="Text_Processing.ITextAbstraction.ITextAbstraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text_Processing.ITextAbstraction.ITextAbstraction</span></code></a></p>
+<dl class="method">
+<dt id="Text_Processing.TextAbstraction.TextAbstraction.frequency_Words">
+<code class="descname">frequency_Words</code><span class="sig-paren">(</span><em>text</em>, <em>n</em>, <em>language='english'</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextAbstraction.TextAbstraction.frequency_Words" title="Permalink to this definition">¶</a></dt>
+<dd><p>frequency_Words compute the frequency of each word in text and give the n words with the highest pop up back
+as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> – The text for which the n highest words shall be extract</li>
+<li><strong>n</strong> – number of words which shall be extract</li>
+<li><strong>language</strong> – The language of the text</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Returns a String, where each row contains the word and how often it occurs</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ExceptionTextAbstraction: When n &lt; number of words in text</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Text_Processing.TextAbstraction.TextAbstraction.summarize_Text">
+<code class="descname">summarize_Text</code><span class="sig-paren">(</span><em>text</em>, <em>n</em>, <em>language='english'</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextAbstraction.TextAbstraction.summarize_Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>summarize_Text return a text with n main sentences of the input text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> – The text, which shall be summarized</li>
+<li><strong>n</strong> – Number of sentences, which shall be used</li>
+<li><strong>language</strong> – The language of the text</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return Return the abstract text
+:raise ExceptionTextAbstraction: When n &lt; number of sentences in text</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.TextCleaner">
+<span id="text-processing-textcleaner-module"></span><h2>Text_Processing.TextCleaner module<a class="headerlink" href="#module-Text_Processing.TextCleaner" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.TextCleaner.TextCleaner">
+<em class="property">class </em><code class="descclassname">Text_Processing.TextCleaner.</code><code class="descname">TextCleaner</code><a class="headerlink" href="#Text_Processing.TextCleaner.TextCleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Text_Processing.ITextCleaner.ITextCleaner" title="Text_Processing.ITextCleaner.ITextCleaner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text_Processing.ITextCleaner.ITextCleaner</span></code></a></p>
+<dl class="method">
+<dt id="Text_Processing.TextCleaner.TextCleaner.cleaningText">
+<code class="descname">cleaningText</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextCleaner.TextCleaner.cleaningText" title="Permalink to this definition">¶</a></dt>
+<dd><p>cleaningText return the text in a clean version. No links, multiple lines etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> – The text, which shall be cleaned</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a string, which is cleaned</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing.TextProcessing">
+<span id="text-processing-textprocessing-module"></span><h2>Text_Processing.TextProcessing module<a class="headerlink" href="#module-Text_Processing.TextProcessing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Text_Processing.TextProcessing.TextProcessing">
+<em class="property">class </em><code class="descclassname">Text_Processing.TextProcessing.</code><code class="descname">TextProcessing</code><span class="sig-paren">(</span><em>database: &lt;module 'DB.IDatabaseManager' from 'D:/DMSDOKU/scripts\DB\IDatabaseManager.py'&gt;</em>, <em>path: str</em>, <em>textSummarizer: &lt;module 'Text_Processing.ITextAbstraction' from 'D:/DMSDOKU/scripts\Text_Processing\ITextAbstraction.py'&gt;</em>, <em>fileToText=&lt;Text_Processing.FileToText.FileToText object&gt;</em>, <em>checkLanguage=&lt;Text_Processing.CheckLanguage.CheckLanguage object&gt;</em>, <em>fileHandler=&lt;FileHandler.FileHandler.FileHandler object&gt;</em>, <em>textCleaner=&lt;Text_Processing.TextCleaner.TextCleaner object&gt;</em>, <em>timeout: int = 60</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextProcessing.TextProcessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt>TextProcessing is the control logic for the text processing of the CourseData.</dt>
+<dd><dl class="first last docutils">
+<dt>The functions are:</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>Textprocessing the logic of the process</li>
+</ul>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Attributes:</dt>
+<dd><ul class="first last simple">
+<li>database (IDatabaseManager): The Connection to the database</li>
+<li>tempPath (str): The path where the coursedata shall be stored temporary</li>
+<li>fileHandler (IFileHandler) to save courseData to the device</li>
+<li>fileToText (IFileToText) to read the text from a file</li>
+<li>textSummarizer (ITextAbstraction) to summarize the text</li>
+<li>textCleaner (ITextCleaner) for cleaning the text</li>
+<li>checkLanguage (ICheckLanguage) to get the language of the text</li>
+<li>timeout (int): The limit of time a file has to be read out</li>
+<li>error (str): The message of an error, which pop up</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="Text_Processing.TextProcessing.TextProcessing.textProcessing">
+<code class="descname">textProcessing</code><span class="sig-paren">(</span><em>courseData: Model.Model.CourseData</em><span class="sig-paren">)</span><a class="headerlink" href="#Text_Processing.TextProcessing.TextProcessing.textProcessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>textProcessing the control logic of the processing. The logic will try to read out the text from the
+CourseData and try to summarize the text in the main sentences and the words main words.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>courseData</strong> – The CourseData which shall be processed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Text_Processing">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Text_Processing" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Text_Processing package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.CheckLanguage">Text_Processing.CheckLanguage module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.FileToText">Text_Processing.FileToText module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.ICheckLanguage">Text_Processing.ICheckLanguage module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.IFileToText">Text_Processing.IFileToText module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.ITextAbstraction">Text_Processing.ITextAbstraction module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.ITextCleaner">Text_Processing.ITextCleaner module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.TextAbstraction">Text_Processing.TextAbstraction module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.TextCleaner">Text_Processing.TextCleaner module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing.TextProcessing">Text_Processing.TextProcessing module</a></li>
+<li><a class="reference internal" href="#module-Text_Processing">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="MoodleCrawler.html"
+                        title="previous chapter">MoodleCrawler package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="setup.html"
+                        title="next chapter">setup module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Text_Processing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="setup module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MoodleCrawler.html" title="MoodleCrawler package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kai Kohl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FileHandler package &#8212; Moodle-HTW-DMS prototype documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GUI package" href="GUI.html" />
+    <link rel="prev" title="Exceptions package" href="Exceptions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GUI.html" title="GUI package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Exceptions.html" title="Exceptions package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="filehandler-package">
+<h1>FileHandler package<a class="headerlink" href="#filehandler-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-FileHandler.FileHandler">
+<span id="filehandler-filehandler-module"></span><h2>FileHandler.FileHandler module<a class="headerlink" href="#module-FileHandler.FileHandler" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="FileHandler.FileHandler.FileHandler">
+<em class="property">class </em><code class="descclassname">FileHandler.FileHandler.</code><code class="descname">FileHandler</code><a class="headerlink" href="#FileHandler.FileHandler.FileHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#FileHandler.IFileHandler.IFileHandler" title="FileHandler.IFileHandler.IFileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler.IFileHandler.IFileHandler</span></code></a></p>
+<dl class="method">
+<dt id="FileHandler.FileHandler.FileHandler.deleteAllFilesInFolder">
+<code class="descname">deleteAllFilesInFolder</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.FileHandler.FileHandler.deleteAllFilesInFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteAllFilesInFolder tries to delete all files behind the path. If a file is still in use, the function does
+nothing to this file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path where the file is stored</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.FileHandler.FileHandler.deleteFile">
+<code class="descname">deleteFile</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.FileHandler.FileHandler.deleteFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteFile tries to delete the file behind the path. If the file is still in use, the function does nothing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path where the file is stored</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.FileHandler.FileHandler.openFile">
+<code class="descname">openFile</code><span class="sig-paren">(</span><em>courseData</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.FileHandler.FileHandler.openFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>openFile open the CourseData, that the user can see the file and can work with
+the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>courseData</strong> – The CourseData which shall be open</li>
+<li><strong>path</strong> – The path where the file shall be stored</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.FileHandler.FileHandler.saveFile">
+<code class="descname">saveFile</code><span class="sig-paren">(</span><em>courseData</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.FileHandler.FileHandler.saveFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>saveFile save the CourseData to the path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>courseData</strong> – The CourseData which shall be saved</li>
+<li><strong>path</strong> – The path where the file shall be stored</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return path:</th><td class="field-body"><p class="first last">The updated path with the name of the file (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-FileHandler.IFileHandler">
+<span id="filehandler-ifilehandler-module"></span><h2>FileHandler.IFileHandler module<a class="headerlink" href="#module-FileHandler.IFileHandler" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="FileHandler.IFileHandler.IFileHandler">
+<em class="property">class </em><code class="descclassname">FileHandler.IFileHandler.</code><code class="descname">IFileHandler</code><a class="headerlink" href="#FileHandler.IFileHandler.IFileHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>FileHandler is responsible for the saving and opening of the courseData. It also delete specific files or all files
+from a folder.</p>
+<dl class="method">
+<dt id="FileHandler.IFileHandler.IFileHandler.deleteAllFilesInFolder">
+<code class="descname">deleteAllFilesInFolder</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.IFileHandler.IFileHandler.deleteAllFilesInFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteAllFilesInFolder tries to delete all files behind the path. If a file is still in use, the function does
+nothing to this file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path where the file is stored</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.IFileHandler.IFileHandler.deleteFile">
+<code class="descname">deleteFile</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.IFileHandler.IFileHandler.deleteFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteFile tries to delete the file behind the path. If the file is still in use, the function does nothing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path where the file is stored</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.IFileHandler.IFileHandler.openFile">
+<code class="descname">openFile</code><span class="sig-paren">(</span><em>courseData: Model.Model.CourseData</em>, <em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#FileHandler.IFileHandler.IFileHandler.openFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>openFile open the CourseData, that the user can see the file and can work with
+the file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>courseData</strong> – The CourseData which shall be open</li>
+<li><strong>path</strong> – The path where the file shall be stored</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FileHandler.IFileHandler.IFileHandler.saveFile">
+<code class="descname">saveFile</code><span class="sig-paren">(</span><em>courseData: Model.Model.CourseData</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#FileHandler.IFileHandler.IFileHandler.saveFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>saveFile save the CourseData to the path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>courseData</strong> – The CourseData which shall be saved</li>
+<li><strong>path</strong> – The path where the file shall be stored</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return path:</th><td class="field-body"><p class="first last">The updated path with the name of the file (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-FileHandler">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FileHandler" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FileHandler package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FileHandler.FileHandler">FileHandler.FileHandler module</a></li>
+<li><a class="reference internal" href="#module-FileHandler.IFileHandler">FileHandler.IFileHandler module</a></li>
+<li><a class="reference internal" href="#module-FileHandler">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Exceptions.html"
+                        title="previous chapter">Exceptions package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="GUI.html"
+                        title="next chapter">GUI package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/FileHandler.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GUI.html" title="GUI package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Exceptions.html" title="Exceptions package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kai Kohl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

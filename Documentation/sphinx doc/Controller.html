@@ -1,0 +1,306 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Controller module &#8212; Moodle-HTW-DMS prototype documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DB package" href="DB.html" />
+    <link rel="prev" title="Welcome to Moodle-HTW-DMS’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="DB.html" title="DB package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Moodle-HTW-DMS’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Controller">
+<span id="controller-module"></span><h1>Controller module<a class="headerlink" href="#module-Controller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Controller.Controller">
+<em class="property">class </em><code class="descclassname">Controller.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Controller class is for loading the specific guis from the GUI folder.
+It also implements and fill the required GUI with logic.</p>
+<dl class="method">
+<dt id="Controller.Controller.cleanMainWindow">
+<code class="descname">cleanMainWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.cleanMainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>reset all fields</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.errorMessage">
+<code class="descname">errorMessage</code><span class="sig-paren">(</span><em>e: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.errorMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the error Gui and print the error message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>e</strong> – the error message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.goBackMainPage">
+<code class="descname">goBackMainPage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.goBackMainPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>goBackMainPage will start the MainPage and will connect everything with
+the required functions and print the required information to the gui.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openAllData">
+<code class="descname">openAllData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openAllData" title="Permalink to this definition">¶</a></dt>
+<dd><p>open all Data which are in the tab_data(modle = modelCourseData) printed
+If no data is printed inform the user that he has to search for CourseData to open a data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openCurrentDownload">
+<code class="descname">openCurrentDownload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openCurrentDownload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will open the current download gui and connect the scrapy logger to the gui.
+It start also the Crawler, if the user stored all required information.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openData">
+<code class="descname">openData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openData" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the the selected CourseData
+if None is selected inform the user that he has to select a CourseData in the table</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openHelp">
+<code class="descname">openHelp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the help GUI. This is for helping the user to work with the application</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openMoodleSummary">
+<code class="descname">openMoodleSummary</code><span class="sig-paren">(</span><em>destination: str = 'Main Page'</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openMoodleSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the GUI for the getMoodleSummary. And print all informations to the gui. This GUI is
+for informing the user about what data per course is new, old  and could not be downloaded.
+Also every specific error in the download process will be shown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>destination</strong> – Which GUI shall load after this gui.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openSettings">
+<code class="descname">openSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the GUI for settings. It is for saving the user information password
+and username from moodle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openTextProcessing">
+<code class="descname">openTextProcessing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openTextProcessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the GUI CurrentDownload and start the text processing. Also it connects the logger
+to the edit line. This Gui informs the user about which CourseData will be textually
+processed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.openWindowStartDownload">
+<code class="descname">openWindowStartDownload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.openWindowStartDownload" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the gui to ask the user, if he really wants to download the moodle data.
+It will connect everything with the required functions and print the required information to the gui.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.printCourseData">
+<code class="descname">printCourseData</code><span class="sig-paren">(</span><em>table=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.printCourseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>print all CourseData from the table to the table tab_data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>table</strong> – the table which shall be printed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.printGeneralCourseInformation">
+<code class="descname">printGeneralCourseInformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.printGeneralCourseInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>print the generalCourseInformation to the table tab_courses</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.quitProgram">
+<code class="descname">quitProgram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.quitProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to delete every file in the temp folder. Only the files, which are not any more
+in use will be deleted.
+After this quit the program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.saveAllData">
+<code class="descname">saveAllData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.saveAllData" title="Permalink to this definition">¶</a></dt>
+<dd><p>save all CourseData which are printed in the tab_data(modle = modelCourseData)
+If no data is printed inform the user that he has to search for CourseData to open a data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.saveData">
+<code class="descname">saveData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.saveData" title="Permalink to this definition">¶</a></dt>
+<dd><p>save the selected data to a folder, which the user select.
+if None is selected inform the user that he has to select a CourseData in the table</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.saveSettings">
+<code class="descname">saveSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.saveSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>It tries to save the informations from the settings to the database.
+If every field is filled save the information to the database and go back to the
+main page.
+Otherwise print an error message and do nothing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.searchData">
+<code class="descname">searchData</code><span class="sig-paren">(</span><em>filter: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.searchData" title="Permalink to this definition">¶</a></dt>
+<dd><p>search for data if filter is all search for all data for search string otherwise for the selected filter
+after this print the searched data to table tab_data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> – filter = “All” if all data shall be searched; filter = “Cell” if only for the specific</td>
+</tr>
+</tbody>
+</table>
+<p>selected filter data shall be searched</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.selectCourseData">
+<code class="descname">selectCourseData</code><span class="sig-paren">(</span><em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.selectCourseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the  selectedCourseData on the data which was selected.
+Print the abstract, the frequency of words and the errors from the data to the text field “text_Abstract”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.selectGeneralCourseInformation">
+<code class="descname">selectGeneralCourseInformation</code><span class="sig-paren">(</span><em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.selectGeneralCourseInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the selectedFilter on the selected Value, which the user selected.
+And print all Data for the specific filter to the tab_data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Controller.Controller.showDataWithoutTextMining">
+<code class="descname">showDataWithoutTextMining</code><span class="sig-paren">(</span><em>filter: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Controller.Controller.showDataWithoutTextMining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for data without text mining and print them to the table tab_data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> – filter = “All” if all data without text-mining shall be searched; filter = “Cell” if only for the specific</td>
+</tr>
+</tbody>
+</table>
+<p>selected filter data without text-mining shall be searched</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Moodle-HTW-DMS’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="DB.html"
+                        title="next chapter">DB package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Controller.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="DB.html" title="DB package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Moodle-HTW-DMS’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kai Kohl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

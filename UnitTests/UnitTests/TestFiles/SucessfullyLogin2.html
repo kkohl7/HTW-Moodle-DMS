@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="de" xml:lang="de">
+<head>
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://moodle.htw-berlin.de/theme/image.php/morehtw/theme/1550062902/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Dashboard" />
+<link rel="stylesheet" type="text/css" href="https://moodle.htw-berlin.de/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/2AD92AE7-34B3-0348-89BD-0C709CFB82A7/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://ff.kis.v2.scr.kaspersky-labs.com/248CCC77-A211-F344-BE8E-8C197AAA6E3F/abn/main.css"/><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.htw-berlin.de/theme/styles.php/morehtw/1550062902_1535979645/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.htw-berlin.de","sesskey":"XdSS2hYYFY","themerev":"1550062902","slasharguments":1,"theme":"morehtw","iconsystemmodule":"core\/icon_system_standard","jsrev":"1550062902","admin":"admin","svgicons":true,"usertimezone":"Europa\/Berlin","contextid":331924};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.htw-berlin.de\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.htw-berlin.de\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.htw-berlin.de\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.htw-berlin.de\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.htw-berlin.de\/theme\/yui_combo.php?m\/1550062902\/","combine":true,"comboBase":"https:\/\/moodle.htw-berlin.de\/theme\/yui_combo.php?","ext":false,"root":"m\/1550062902\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_stack-input":{"requires":["node","event-valuechange","moodle-core-event","io","json-parse"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.htw-berlin.de\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.htw-berlin.de\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1550062902\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.htw-berlin.de\/lib\/javascript.php\/1550062902\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.htw-berlin.de\/lib\/javascript.php\/1550062902\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body  id="page-my-index" class="format-site  path-my gecko dir-ltr lang-de yui-skin-sam yui3-skin-sam moodle-htw-berlin-de pagelayout-mydashboard course-1 context-331924 has-region-content used-region-content has-region-side-post used-region-side-post layout-option-langmenu">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Zum Hauptinhalt</a>
+</div><script type="text/javascript" src="https://moodle.htw-berlin.de/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://moodle.htw-berlin.de/lib/javascript.php/1550062902/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<!--div style="background-color: red; text-align: center;color: white;">Wartungsarbeiten am Mittwoch, 13.02. zwischen 13:30 und 15:00 Uhr</div-->
+
+<header role="banner" class="navbar navbar-fixed-top navbar-inverse moodle-has-zindex">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+            <a class="small-logo-container" title="Startseite" href="https://moodle.htw-berlin.de/"><img class="small-logo" src="https://moodle.htw-berlin.de/pluginfile.php/1/theme_morehtw/smalllogo/1550062902/htwlogo.png" alt="Site logo" /></a>            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></a>            <div class="usermenu"><div class="moodle-actionmenu nowrap-items" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <ul class="menubar" id="action-menu-0-menubar" role="menubar">
+
+            <!--
+
+            --><!--
+
+            --><li role="presentation"><a href="#" class=" toggle-display textmenu" id="action-menu-toggle-0" title="Nutzermenü" role="menuitem"><span class="userbutton"><span class="usertext">Kai Stephan Kohl</span><span class="avatars"><span class="avatar current"><img src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/u/f2" alt="Nutzerbild Kai Stephan Kohl" title="Nutzerbild Kai Stephan Kohl" class="userpicture defaultuserpic" width="35" height="35" role="presentation" /></span></span></span><b class="caret"></b></a>
+</li>
+
+        </ul>
+
+
+        <ul class="menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+            <li role="presentation">    <a href="https://moodle.htw-berlin.de/my/" class="icon menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1"><img class="icon " alt="Dashboard" title="Dashboard" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/i/dashboard" /><span class="menu-action-text" id="actionmenuaction-1">Dashboard</span></a>
+
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+
+</li><li role="presentation">    <a href="https://moodle.htw-berlin.de/user/profile.php?id=34503" class="icon menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2"><img class="icon " alt="Profil" title="Profil" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/i/user" /><span class="menu-action-text" id="actionmenuaction-2">Profil</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="https://moodle.htw-berlin.de/grade/report/overview/index.php" class="icon menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3"><img class="icon " alt="Bewertungen" title="Bewertungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/grades" /><span class="menu-action-text" id="actionmenuaction-3">Bewertungen</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="https://moodle.htw-berlin.de/message/index.php" class="icon menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4"><img class="icon " alt="Mitteilungen" title="Mitteilungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/message" /><span class="menu-action-text" id="actionmenuaction-4">Mitteilungen</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="https://moodle.htw-berlin.de/user/preferences.php" class="icon menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5"><img class="icon " alt="Einstellungen" title="Einstellungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/preferences" /><span class="menu-action-text" id="actionmenuaction-5">Einstellungen</span></a>
+
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+
+</li><li role="presentation">    <a href="https://moodle.htw-berlin.de/login/logout.php?sesskey=XdSS2hYYFY" class="icon menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6"><img class="icon " alt="Logout" title="Logout" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/a/logout" /><span class="menu-action-text" id="actionmenuaction-6">Logout</span></a>
+
+
+
+
+
+</li>
+        </ul>
+</div></div>            <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="34503"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c6e719adeabe5c6e719ad0b7911"
+        aria-haspopup="true"
+        aria-label="Mitteilungsfenster ohne neue Mitteilungen anzeigen"
+        tabindex="0">
+                <img class="icon " alt="Mitteilungen" title="Mitteilungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/message" />
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c6e719adeabe5c6e719ad0b7911"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Systemmitteilungen"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Mitteilungen</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+            <a href="https://moodle.htw-berlin.de/message/index.php?contactsfirst=1">Neue Mitteilung
+            </a>
+        </div>
+        <a class="mark-all-read-button"
+           href="#"
+           role="button"
+           title="Alle als gelesen markieren"
+           data-action="mark-all-read">
+            <span class="normal-icon"><img class="icon " alt="Alle als gelesen markieren" title="Alle als gelesen markieren" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/markasread" /></span>
+            <span class="loading-icon"><img class="icon " alt="Wird geladen" title="Wird geladen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/y/loading" /></span>
+        </a>
+        <a href="https://moodle.htw-berlin.de/message/edit.php?id=34503"
+           title="Mitteilungen">
+            <img class="icon " alt="Mitteilungen" title="Mitteilungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/i/settings" />
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">Keine Mitteilungen</div>
+
+            </div>
+            <span class="loading-icon"><img class="icon " alt="Wird geladen" title="Wird geladen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/y/loading" /></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.htw-berlin.de/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Alle anzeigen</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="34503"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c6e719adf6705c6e719ad0b7912"
+        aria-haspopup="true"
+        aria-label="Mitteilungsfenster ohne neue Benachrichtigungen anzeigen"
+        tabindex="0">
+                <img class="icon " alt="Systemmitteilungen" title="Systemmitteilungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/i/notifications" />
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c6e719adf6705c6e719ad0b7912"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Systemmitteilungen"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Systemmitteilungen</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Alle als gelesen markieren"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><img class="icon " alt="Alle als gelesen markieren" title="Alle als gelesen markieren" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/t/markasread" /></span>
+            <span class="loading-icon"><img class="icon " alt="Wird geladen" title="Wird geladen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/y/loading" /></span>
+        </a>
+        <a href="https://moodle.htw-berlin.de/message/notificationpreferences.php?userid=34503"
+           title="Systemmitteilungen">
+            <img class="icon " alt="Systemmitteilungen" title="Systemmitteilungen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/i/settings" />
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Keine Systemmitteilungen</div>
+
+            </div>
+            <span class="loading-icon"><img class="icon " alt="Wird geladen" title="Wird geladen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/y/loading" /></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.htw-berlin.de/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Alle anzeigen</div>
+                    </div>
+                </a>
+    </div>
+</div>                        <div class="nav-collapse collapse">
+                <ul class="nav"><li class="dropdown"><a href="#cm_submenu_1" class="dropdown-toggle" data-toggle="dropdown" title="Support">Support<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Support-Anfragen und Material" href="https://moodle.htw-berlin.de/course/view.php?id=12281">Support-Anfragen und Material</a></li><li><a title="Datenschutz und Privatsphäre" href="https://moodle.htw-berlin.de/course/view.php?id=12205">Datenschutz und Privatsphäre</a></li></ul><li class="dropdown langmenu"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Sprache">Deutsch ‎(de)‎<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Deutsch ‎(de)‎" href="https://moodle.htw-berlin.de/my/index.php?lang=de">Deutsch ‎(de)‎</a></li><li><a title="English ‎(en)‎" href="https://moodle.htw-berlin.de/my/index.php?lang=en">English ‎(en)‎</a></li><li><a title="Español - Internacional ‎(es)‎" href="https://moodle.htw-berlin.de/my/index.php?lang=es">Español - Internacional ‎(es)‎</a></li><li><a title="Français ‎(fr)‎" href="https://moodle.htw-berlin.de/my/index.php?lang=fr">Français ‎(fr)‎</a></li><li><a title="Русский ‎(ru)‎" href="https://moodle.htw-berlin.de/my/index.php?lang=ru">Русский ‎(ru)‎</a></li></ul></ul>                <ul class="nav pull-right">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="page" class="container-fluid">
+    <header id="page-header" class="clearfix"><div class="page-context-header"><div class="page-header-image"><a href="https://moodle.htw-berlin.de/user/profile.php?id=34503"><img src="https://moodle.htw-berlin.de/theme/image.php/morehtw/core/1550062902/u/f1" alt="Nutzerbild Kai Stephan Kohl" title="Nutzerbild Kai Stephan Kohl" class="userpicture defaultuserpic" width="100" height="100" /></a></div><div class="page-header-headings"><h1>Kai Stephan Kohl</h1></div></div><div class="clearfix" id="page-navbar"><div class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Seitenpfad</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://moodle.htw-berlin.de/my/"><span itemprop="title">Dashboard</span></a></span></li></ul></nav></div><div class="breadcrumb-button"></div></div><div id="course-header"></div></header>    <div id="page-content" class="row-fluid">
+        <div id="region-main-box" class="span9 desktop-first-column">
+            <div class="row-fluid">
+		<section id="region-main">
+                <!--section id="region-main" class="span8 pull-right"-->
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><aside id="block-region-content" class="block-region" data-blockregion="content" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Meine Kurse überspringen</a><div id="inst14" class="block_course_overview_campus  block" role="complementary" data-block="course_overview_campus" data-instanceid="14" aria-labelledby="instance-14-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-14-header">Meine Kurse</h2></div></div><div class="content"><form method="post" action=""><div id="coc-filterlist" class="container-fluid"><div class="row"><div class="coc-filter span6 col-md-6 m-b-1"><label for="coc-filterterm">Semester</label><select name="coc-term" id="coc-filterterm" class="input-block-level form-control"><option value="all" selected>Alle</option> <option value="2018-2">WiSe 2018/2019</option> <option value="2017-2">WiSe 2017/2018</option> <option value="2017-1">SoSe 2017</option> <option value="2016-2">WiSe 2016/2017</option> </select></div><div class="coc-filter span6 col-md-6 m-b-1"><label for="coc-filterteacher">Dozent/in</label><select name="coc-teacher" id="coc-filterteacher" class="input-block-level form-control"><option value="all" selected>Alle</option> <option value="226">Bodrow, Wladimir</option> <option value="4608">Engler, Lela-Rose</option> <option value="856">Frischmuth, Norman</option> <option value="15962">Hartmann, Thomas</option> <option value="27760">Heimann, Michael</option> <option value="264">Hemling, Holger</option> <option value="32363">Hirschinger, Jens</option> <option value="32137">Hochstein, Axel</option> <option value="2039">Kempa, Martin</option> <option value="7596">Mundt, Ronald</option> <option value="8835">Müller, Konstantin</option> <option value="32321">Spott, Martin</option> <option value="408">Stanierowski, Margret</option> <option value="23317">Ußling, Thomas</option> </select></div></div></div><div id="coc-filtersubmit" class="container-fluid m-b-1"><div class="row"><input type="submit" value="Filter meiner Kurse!" class="btn btn-primary" /></div></div></form><div id="coc-courselist" class="container-fluid m-b-1"><div id="coc-course-13894" class="row coc-course"><div class="hidecoursediv coc-hidecourse-13894"><div class="termdiv coc-term-2017-1"><div class="teacherdiv coc-teacher-408 coc-teacher-32363"><div class="box coursebox"><div class="hidenewsicon">
+                                    <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidenews=13894&amp;coc-shownews" id="coc-hidenewsicon-13894" title="Kursneuigkeiten verbergen"><img class="icon " alt="Kursneuigkeiten verbergen" title="Kursneuigkeiten verbergen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/expanded" /></a>
+                                    <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidenews&amp;coc-shownews=13894" id="coc-shownewsicon-13894" class="coc-hidden" title="Zeige Kursneuigkeiten"><img class="icon " alt="Zeige Kursneuigkeiten" title="Zeige Kursneuigkeiten" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/collapsed" /></a>
+                                <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidecourse=12135&amp;coc-showcourse" id="coc-hidecourseicon-12135" title="Kurs verbergen"><img class="icon " alt="Kurs verbergen" title="Kurs verbergen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/hide" /></a>
+                                <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidecourse&amp;coc-showcourse=12135" id="coc-showcourseicon-12135" class="coc-hidden" title="Kurs anzeigen"><img class="icon " alt="Kurs anzeigen" title="Kurs anzeigen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/show" /></a>
+                            </div><h3><a title="M1.2 Management von IV-Projekten (SL) Z1 SoSe2016" href="https://moodle.htw-berlin.de/course/view.php?id=12135">M1.2 Management von IV-Projekten (SL) Z1 SoSe2016<br /><span class="coc-metainfo">(M-IV-P-119804-Z1  |  Norman F)</span></a></h3></div></div></div></div></div><div id="coc-course-11967" class="row coc-course"><div class="hidecoursediv coc-hidecourse-11967"><div class="termdiv coc-term-2016-2"><div class="teacherdiv coc-teacher-2039"><div class="box coursebox"><div class="hidenewsicon">
+                                    <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidenews=11967&amp;coc-shownews" id="coc-hidenewsicon-11967" title="Kursneuigkeiten verbergen"><img class="icon " alt="Kursneuigkeiten verbergen" title="Kursneuigkeiten verbergen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/expanded" /></a>
+                                    <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidenews&amp;coc-shownews=11967" id="coc-shownewsicon-11967" class="coc-hidden" title="Zeige Kursneuigkeiten"><img class="icon " alt="Zeige Kursneuigkeiten" title="Zeige Kursneuigkeiten" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/collapsed" /></a>
+                                <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidecourse=12151&amp;coc-showcourse" id="coc-hidecourseicon-12151" title="Kurs verbergen"><img class="icon " alt="Kurs verbergen" title="Kurs verbergen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/hide" /></a>
+                                <a href="https://moodle.htw-berlin.de/my/index.php?coc-manage=0&amp;coc-hidecourse&amp;coc-showcourse=12151" id="coc-showcourseicon-12151" class="coc-hidden" title="Kurs anzeigen"><img class="icon " alt="Kurs anzeigen" title="Kurs anzeigen" src="https://moodle.htw-berlin.de/theme/image.php/morehtw/block_course_overview_campus/1550062902/show" /></a>
+                            </div><h3><a title="M1.4 Stochastik und Induktive Statistik (PCÜ) Z1G1, Z1G2 WiSe2016" href="https://moodle.htw-berlin.de/course/view.php?id=12151">M1.4 Stochastik und Induktive Statistik (PCÜ) Z1G1, Z1G2 WiSe2016<br /><span class="coc-metainfo">(STO-STA-119526-Z1G1,Z1G2  |  Michael H, Martin S, Thomas U)</span></a></h3></div></div></div></div></div><div id="coc-course-11536" class="row coc-course"><div class="hidecoursediv coc-hidecourse-11536"><div class="termdiv coc-term-2016-2"><div class="teacherdiv coc-teacher-32321">
+        <aside id="block-region-side-post" class="span3 pull-right block-region" data-blockregion="side-post" data-droptarget="1"><a class="skip skip-block" id="fsb-5" href="#sb-5">Wichtige Links überspringen</a><div id="inst251" class="block_html  block" role="complementary" data-block="html" data-instanceid="251" aria-labelledby="instance-251-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-251-header">Wichtige Links</h2></div></div><div class="content"><div class="no-overflow"><ul>
+<li><a title="Alle Fachbereiche und Kurse" href="https://moodle.htw-berlin.de/course/">Alle Fachbereiche und Kurse</a></li>
+<li><a target="_blank" title="Datenschutzerklärung der HTW Berlin zu Moodle-Nutzung" href="https://moodle.htw-berlin.de/datenschutzerklaerung_moodle_htw-berlin.html">Datenschutzerklärung</a></li>
+<li><a target="_blank" title="Moodle-Tutorials (Videos und PDF)" href="https://moodle.htw-berlin.de/course/view.php?id=12281">Moodle-Tutorials (Videos &amp; PDF)</a></li>
+</ul></div></div></div><span class="skip-block-to" id="sb-5"></span><a class="skip skip-block" id="fsb-6" href="#sb-6">Moodle-Support überspringen</a><div id="inst18" class="block_html  block" role="complementary" data-block="html" data-instanceid="18" aria-labelledby="instance-18-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-18-header">Moodle-Support</h2></div></div><div class="content"><div class="no-overflow"><div class="title"><strong>Sprechzeiten</strong></div>
+<div class="title"></div>
+<div class="title">Die Sprechzeiten und Kontaktdaten des Moodlesupport finden Sie <a href="https://moodle.htw-berlin.de/course/view.php?id=12281" target="_blank">hier</a>.</div>
+<p></p>
+<p></p>
+<hr style="color: #ecebed; background-color: #ecebed; height: 4px; margin-right: 5; text-align: center; border: 1px solid #dadada;" />
+<p style="text-align: center;"><a target="_blank" title="Datenschutz und Privatsphäre" href="https://moodle.htw-berlin.de/course/view.php?id=12205">Datenschutz und Privatsphäre</a></p>
+<p style="text-align: center;"><a href="https://moodle.htw-berlin.de/course/view.php?id=12186">Infos zum Urheberrecht</a></p></div></div></div><span class="skip-block-to" id="sb-6"></span><a class="skip skip-block" id="fsb-7" href="#sb-7">Neue Ankündigungen überspringen</a><div id="inst33093" class="block_news_items  block" role="complementary" data-block="news_items" data-instanceid="33093" aria-labelledby="instance-33093-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-33093-header">Neue Ankündigungen</h2></div></div><div class="content">
+<ul class='unlist'>
+<li class="post"><div class="head clearfix"><div class="date">19. Feb, 14:01</div><div class="name">Tina Tanurovska</div></div><div class="info"><a href="https://moodle.htw-berlin.de/mod/forum/discuss.php?d=75841">eLearning-Tage 18.03.-22.03.2019</a></div></li>
+<li class="post"><div class="head clearfix"><div class="date">12. Feb, 09:04</div><div class="name">Sebastian Homer</div></div><div class="info"><a href="https://moodle.htw-berlin.de/mod/forum/discuss.php?d=76155">Wartungsarbeiten am 13.02.2019 // 13:30 - 15:00</a></div></li>
+<li class="post"><div class="head clearfix"><div class="date">18. Jan, 16:15</div><div class="name">Tina Tanurovska</div></div><div class="info"><a href="https://moodle.htw-berlin.de/mod/forum/discuss.php?d=75181">Workshop wikimontag!</a></div></li>
+</ul>
+<div class="footer"><a href="https://moodle.htw-berlin.de/mod/forum/view.php?f=2">Ältere Themen</a> ...</div></div></div><span class="skip-block-to" id="sb-7"></span></aside>    </div>
+
+    <footer id="page-footer">
+        <div id="course-footer"></div>
+        <p class="helplink"></p>
+        <div class="footnote text-center"><div class="text_to_html"><p><a href="https://www.htw-berlin.de/impressum/" target="_blank" rel="noreferrer noopener">Impressum</a> | <a href="https://datenschutz.htw-berlin.de/verfahren/digitales-lehren-lernen/" target="_blank" rel="noreferrer noopener">Datenschutzerklärung</a></p></div></div><div class="logininfo">Sie sind angemeldet als <a href="https://moodle.htw-berlin.de/user/profile.php?id=34503" title="Profil anzeigen">Kai Stephan Kohl</a> (<a href="https://moodle.htw-berlin.de/login/logout.php?sesskey=XdSS2hYYFY">Logout</a>)</div><div class="homelink"><a href="https://moodle.htw-berlin.de/">Startseite</a></div><a href="https://download.moodle.org/mobile?version=2017111307.01&amp;lang=de&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Laden Sie die mobile App</a>    </footer>
+
+    <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.htw-berlin.de/lib/requirejs.php/1550062902/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.htw-berlin.de/lib/javascript.php/1550062902/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle.htw-berlin.de/lib/javascript.php/1550062902/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.htw-berlin.de/lib/javascript.php/1550062902/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.htw-berlin.de/lib/javascript.php/1550062902/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.htw-berlin.de/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("de",{
+ "Play": "Wiedergabe",
+ "Pause": "Pause",
+ "Replay": "Erneut abspielen",
+ "Current Time": "Aktueller Zeitpunkt",
+ "Duration Time": "Dauer",
+ "Remaining Time": "Verbleibende Zeit",
+ "Stream Type": "Streamtyp",
+ "LIVE": "LIVE",
+ "Loaded": "Geladen",
+ "Progress": "Status",
+ "Fullscreen": "Vollbild",
+ "Non-Fullscreen": "Kein Vollbild",
+ "Mute": "Ton aus",
+ "Unmute": "Ton ein",
+ "Playback Rate": "Wiedergabegeschwindigkeit",
+ "Subtitles": "Untertitel",
+ "subtitles off": "Untertitel aus",
+ "Captions": "Untertitel",
+ "captions off": "Untertitel aus",
+ "Chapters": "Kapitel",
+ "You aborted the media playback": "Sie haben die Videowiedergabe abgebrochen.",
+ "A network error caused the media download to fail part-way.": "Der Videodownload ist aufgrund eines Netzwerkfehlers fehlgeschlagen.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Das Video konnte nicht geladen werden, da entweder ein Server- oder Netzwerkfehler auftrat oder das Format nicht unterstützt wird.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "Die Videowiedergabe wurde entweder wegen eines Problems mit einem beschädigten Video oder wegen verwendeten Funktionen, die vom Browser nicht unterstützt werden, abgebrochen.",
+ "No compatible source was found for this media.": "Für dieses Video wurde keine kompatible Quelle gefunden.",
+ "Play Video": "Video abspielen",
+ "Close": "Schließen",
+ "Modal Window": "Modales Fenster",
+ "This is a modal window": "Dies ist ein modales Fenster",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "Durch Drücken der Esc-Taste bzw. Betätigung der Schaltfläche \"Schließen\" wird dieses modale Fenster geschlossen.",
+ ", opens captions settings dialog": ", öffnet Einstellungen für Untertitel",
+ ", opens subtitles settings dialog": ", öffnet Einstellungen für Untertitel",
+ ", selected": ", ausgewählt",
+ "captions settings": "Untertiteleinstellungen",
+ "subtitles settings": "Untertiteleinstellungen",
+ "descriptions settings": "Einstellungen für Beschreibungen",
+ "Close Modal Dialog": "Modales Fenster schließen",
+ "Descriptions": "Beschreibungen",
+ "descriptions off": "Beschreibungen aus",
+ "The media is encrypted and we do not have the keys to decrypt it.": "Die Entschlüsselungsschlüssel für den verschlüsselten Medieninhalt sind nicht verfügbar.",
+ ", opens descriptions settings dialog": ", öffnet Einstellungen für Beschreibungen",
+ "Audio Track": "Tonspur",
+ "Text": "Schrift",
+ "White": "Weiß",
+ "Black": "Schwarz",
+ "Red": "Rot",
+ "Green": "Grün",
+ "Blue": "Blau",
+ "Yellow": "Gelb",
+ "Magenta": "Magenta",
+ "Cyan": "Türkis",
+ "Background": "Hintergrund",
+ "Window": "Fenster",
+ "Transparent": "Durchsichtig",
+ "Semi-Transparent": "Halbdurchsichtig",
+ "Opaque": "Undurchsictig",
+ "Font Size": "Schriftgröße",
+ "Text Edge Style": "Textkantenstil",
+ "None": "Kein",
+ "Raised": "Erhoben",
+ "Depressed": "Gedrückt",
+ "Uniform": "Uniform",
+ "Dropshadow": "Schlagschatten",
+ "Font Family": "Schristfamilie",
+ "Proportional Sans-Serif": "Proportionale Sans-Serif",
+ "Monospace Sans-Serif": "Monospace Sans-Serif",
+ "Proportional Serif": "Proportionale Serif",
+ "Monospace Serif": "Monospace Serif",
+ "Casual": "Zwanglos",
+ "Script": "Schreibeschrift",
+ "Small Caps": "Small-Caps",
+ "Reset": "Zurücksetzen",
+ "restore all settings to the default values": "Alle Einstellungen auf die Standardwerte zurücksetzen",
+ "Done": "Fertig",
+ "Caption Settings Dialog": "Einstellungsdialog für Untertitel",
+ "Beginning of dialog window. Escape will cancel and close the window.": "Anfang des Dialogfensters. Esc bricht ab und schließt das Fenster.",
+ "End of dialog window.": "Ende des Dialogfensters.",
+ "Audio Player": "Audio-Player",
+ "Video Player": "Video-Player",
+ "Progress Bar": "Forschrittsbalken",
+ "progress bar timing: currentTime={1} duration={2}": "{1} von {2}",
+ "Volume Level": "Lautstärkestufe"
+});
+
+    });
+});;
+require(["block_course_overview_campus/hidecourse"], function(amd) { amd.initHideCourse({"local_boostcoc":false,"courses":"13894 10743 10745 12135 11967 12151 11536 11442 11794 18819 15747 15531 13355 13449 12677 12811 15116 15156 15530","manage":0}); });;
+require(["block_course_overview_campus/hidenews"], function(amd) { amd.initHideNews({"courses":"13894 10745 11967 13449 12677 12811 15116 15156"}); });;
+require(["block_course_overview_campus/filter"], function(amd) { amd.initFilter({"local_boostcoc":false,"initialsettings":{"term":"all","teacher":"all","category":"","toplevelcategory":""}}); });;
+
+require([
+    'jquery',
+    'core_calendar/selectors',
+    'core_calendar/events',
+], function(
+    $,
+    CalendarSelectors,
+    CalendarEvents
+) {
+    var root = $('#month-upcoming-mini-5c6e719ad0b3b5c6e719ad0b791');
+
+    $('body').on(CalendarEvents.filterChanged, function(e, data) {
+        M.util.js_pending("month-upcoming-mini-5c6e719ad0b3b5c6e719ad0b791-filterChanged");
+
+        // A filter value has been changed.
+        // Find all matching cells in the popover data, and hide them.
+        var target = $("#month-upcoming-mini-5c6e719ad0b3b5c6e719ad0b791").find(CalendarSelectors.eventType[data.type]);
+
+        var transitionPromise = $.Deferred();
+        if (data.hidden) {
+            transitionPromise.then(function() {
+                return target.slideUp('fast').promise();
+            });
+        } else {
+            transitionPromise.then(function() {
+                return target.slideDown('fast').promise();
+            });
+        }
+
+        transitionPromise.then(function() {
+            M.util.js_complete("month-upcoming-mini-5c6e719ad0b3b5c6e719ad0b791-filterChanged");
+
+            return;
+        });
+
+        transitionPromise.resolve();
+    });
+});
+;
+
+require(['jquery', 'core_calendar/calendar_view'], function($, CalendarView) {
+    CalendarView.init($("#calendar-upcoming-block-5c6e719ad0b3b5c6e719ad0b791"), 'upcoming');
+});
+;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", null); });;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery'], function($) {
+    $('#single_select5c6e719ad0b7914').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5c6e719ad0b7913').submit();
+        }
+    });
+});
+;
+require(["core/notification"], function(amd) { amd.init(331924, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.htw-berlin.de/theme/javascript.php/morehtw/1550062902/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Zuletzt ge\u00e4ndert","name":"Name","error":"Fehler","info":"Informationen","yes":"Ja","no":"Nein","ok":"OK","cancel":"Abbrechen","morehelp":"Weitere Hilfe","loadinghelp":"Wird geladen...","confirm":"Best\u00e4tigen","areyousure":"Sind Sie sicher?","closebuttontitle":"Schlie\u00dfen","unknownerror":"Unbekannter Fehler"},"repository":{"type":"Typ","size":"Gr\u00f6\u00dfe","invalidjson":"Ung\u00fcltiger JSON-Text","nofilesattached":"Keine Datei","filepicker":"Dateiauswahl","logout":"Abmelden","nofilesavailable":"Keine Dateien vorhanden","norepositoriesavailable":"Keine Ihrer aktuellen Repositories kann Dateien im n\u00f6tigen Format liefern","fileexistsdialogheader":"Datei bereits vorhanden","fileexistsdialog_editor":"Eine Datei mit diesem Namen wurde bereits an den Text angeh\u00e4ngt, den Sie gerade bearbeiten","fileexistsdialog_filemanager":"Eine Datei mit diesem Namen wurde bereits an den Text angeh\u00e4ngt","renameto":"Nach '{$a}' umbenennen","referencesexist":"{$a} Aliase\/Verkn\u00fcpfungen zu dieser Datei","select":"W\u00e4hlen Sie"},"admin":{"confirmdeletecomments":"M\u00f6chten Sie die Kommentare wirklich l\u00f6schen?","confirmation":"Best\u00e4tigung"},"block":{"addtodock":"Block ins Dock bewegen","undockitem":"Diesen Block abdocken","dockblock":"Block {$a} ins Dock","undockblock":"'{$a}' abdocken","undockall":"Alles abdocken","hidedockpanel":"Dock verbergen","hidepanel":"Steuerung verbergen"},"langconfig":{"thisdirectionvertical":"btt"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"de"});
+});
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst251","title":"Wichtige Links","preference":"block251hidden","tooltipVisible":"Block Wichtige Links verbergen","tooltipHidden":"Block Wichtige Links anzeigen"});
+M.util.init_block_hider(Y, {"id":"inst18","title":"Moodle-Support","preference":"block18hidden","tooltipVisible":"Block Moodle-Support verbergen","tooltipHidden":"Block Moodle-Support anzeigen"});
+M.util.init_block_hider(Y, {"id":"inst33093","title":"Neue Ank\u00fcndigungen","preference":"block33093hidden","tooltipVisible":"Block Neue Ank\u00fcndigungen verbergen","tooltipHidden":"Block Neue Ank\u00fcndigungen anzeigen"});
+M.util.init_block_hider(Y, {"id":"inst14","title":"Meine Kurse","preference":"block14hidden","tooltipVisible":"Block Meine Kurse verbergen","tooltipHidden":"Block Meine Kurse anzeigen"});
+M.util.init_block_hider(Y, {"id":"inst15","title":"Aktuelle Termine","preference":"block15hidden","tooltipVisible":"Block Aktuelle Termine verbergen","tooltipHidden":"Block Aktuelle Termine anzeigen"});
+ M.util.js_pending('random5c6e719ad0b7920'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5c6e719ad0b7920'); });
+})();
+//]]>
+</script>
+
+</div>
+</body>
+</html>

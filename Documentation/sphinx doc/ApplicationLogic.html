@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Application logic &#8212; Moodle-HTW-DMS prototype documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GUI folder" href="GUI_Folder.html" />
+    <link rel="prev" title="Welcome to Moodle-HTW-DMS’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GUI_Folder.html" title="GUI folder"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Moodle-HTW-DMS’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="application-logic">
+<h1>Application logic<a class="headerlink" href="#application-logic" title="Permalink to this headline">¶</a></h1>
+<p>This side explains the logic of the application.</p>
+<p>The general logic of the application is documented with activity diagrams in the folder “HTW-Moodle-DMS/Documentation/Activity diagrams” (Visual Paradigma data) or “HTW-Moodle-DMS/Documentation/Activity diagrams/pdf” (pdf data).</p>
+<p>The program on windows shall started with running the “main.bat”. This program will start first the “setup.py” file, which will check if all required data is install on the pc. If not it will download the data. After this job is finish, the batch-script will start the main program with starting “Controller.py”.</p>
+<p>The Controller will give the task to create all required tables to the IDatabaseManager. If they already exists, nothing will happen. After this, the Controller tries to load the user from the database. If no user exists, the Controller will load the “Settings.ui” with the function “openSettings”, otherwise the “MainGui.ui” with the function “goBackMainPage”.</p>
+<p>The function openSettings will give every element on the ui the required functions and content. In this case, the Controller check, if a user is stored in the database. If a user is stored, the user will be loaded and his information will be print on the side. Otherwise, the user will see dummy values, which says, how the username in moodle looks like. If the user click on the button “speichern”, the Controller checks, if the username and password fields are fill. If the fields have values, these will be save in the database and the main page will be loaded (function: goBackMainPage). Otherwise, the user get an error message. The other option for the user is to click the button “Abbrechen”, this will do nothing to the database and the function “goBackMainPage” will be execute.</p>
+<p>The function goBackMainPage will open the MainGui.ui and load all courses of the user from the database and will print them to the gui. After this all elements will the required functions and content. Now the user has the option to get help (button Hilfe), change his user data (button Einstellungen), search data (five different options), open or save data (four different options), get the summary of the last moodle download (button Zusammenfassung letzter Download), start a new moodle download (button Moodledateien herunterladen), select a course data, close the program (button Schließen).</p>
+<p>If the user press the button Hilfe, the function openHelp will be call. This will open the gui “Help.ui”. All elements get the required functions and content. This page is for informing the user how he can use the tool. If he press the button on the page, the function “goBackMainPage will be called and the user get backs to the main page.</p>
+<p>If the user wants to change his moodle user, he has to click the button Einstellungen. This will load the settings.ui by calling the function openSettings.</p>
+<p>For searching data, the user has five different options. One way is to click on a cell on the left side (general course information), this will work as a filter and all data for this filter will be load from the database. After the loading process, these elements will be print in middle table. Other options are to search data, which contains a specific word. For this the user has to click on the buttons “Suche in ausgewählter Zelle” or “Suche in allen Daten”. Another option is to show the data, which could not get a text processing. For showing these data the user has to click on the button “Zeige Daten ohne Textaufbereitung in ausgewählter Zelle” or “Zeige Daten ohne Textaufbereitung”.</p>
+<p>For opening or saving the course data, the program has four different options. One is to select specific data rows in the middle table and push the button “Datei öffnen” or “Datei speichern unter”. The other opportunity is to open or save all data, which are printed to the gui. For this the user has to push the button “Alle Dateien öffnen” oder “Alle Dateien speichern unter”. All these functions will handle the FileHandler.</p>
+<p>When the user push the button “Zusammenfassung letzter Download” the gui “MoodleSummary.ui” will be load by calling the function openMoodleSummary. In this will be print the summary of the last moodle download. This information will be load from the database with the DatabaseManager.</p>
+<p>If the user wants to close the program, the user push the button „Schließen“. This will call the FileHandler, that the component will delete every file from the folder “temp”. After this, the program will be close.</p>
+<p>To start a new moodle download the user has to push the button “Moodledateien herunterladen”. This will call the function openWindowStartDownload. This will load the file “StartDownload.ui”. First, the Controller check if already a download process was start in this application run. If the download process was already execuet, the button for starting the download process will disable and the user will be inform with the error message that he cannot download again in this application run. Otherwise the information when the last download was will load from the database and print to the gui. After this, every button will get the required function. If the user push the button “Abbrechen”, the user get back to main page. Otherwise, the function openCurrentDownload will be call.</p>
+<p>When the openCurrentDownload function is call, the logger output will be set on the gui. After this, the button “Fertig” will be disable until the process is finished. The next step is to load the current user from the database. If no user exist the logger will be deactivate and the error window will be load and the user will be informed. After this, the main page will be load. If a user exists, the crawler will be start. After the crawler is finish, the attribute startedMoodleCrawler will set on true and the logger will be disable. The next step is to check if the login process was successfully. If it was unsuccessful, the error message will call and the user get back to the main page. Otherwise, the button will be abled and if the user push the button, the moodle summary will be load. After the user push the button on the gui for the moodle summary the function “openTextProcessing” will be execute.</p>
+<p>In the function openTextProcessing the file “CurrentDownload.ui” will be load. After the loading process, the logger will be set on the gui and the button to leave the gui will be disabled. After this, a text processor will be create and all data, which has no text processing and have the required data type, will loaded from the database. For each data, “textProcessing” will be call. After all data are processed, the button will be enable and the logger gets deactivate. If the user push the button, he get back to the main page.</p>
+<p>The logic of the start crawler is, to delete all old information from the database, like if the last login was successfully. In addition, which data could not get download at the last download process. After this all course, data will set on old in the database. After this the MoodleCrawler tries to login to the moodle page. If an error occur, this information will save in the database. Another option is that the login was not successfully. This information will save in the database. The last possibility is that the login was successfully. In this case, in the database will save that the login was successfully and when it was. After this, the side will be search for courses. Each found course will searched for the link and course information. The next step is to check, if these information are already in the database. If not these will be inserted. For each found course, the link to the moodle course will be call with the function “parse_course_site”.</p>
+<p>Every course site will be investigate to get all sections from the side. For each section, the section name will be extract and all data of the section will investigate. For this, every data will check for the data type. If it is the required type, the link of the data will be extract. If in this case the result is, that the data is hidden, an error will be insert to the database. If the data is not hidden, the crawler check if the data is already stored in the database. If it is not in the database, the data will be download and insert in the database. If it is stored, the crawler check if the describing information position and section name of the data has changed. If it changed, the data will update, otherwise, nothing will happen.</p>
+<p>The process for text processing for each data will be execute with following logic. First, the course data will be save to the “temp” folder with the FileHandler. After this, the text will read out from the file with the FileToText. If an error pop up in the read process the error text will set on the popped up error and the read text on empty. Otherwise, the text will set on the text from the reading process. The next step is, to check if the read text is empty. If the text is empty, the processor checks if the error text is empty. If the error text is empty, the error text will set on a value, which says, that the data contains only pictures and no text. If the text is not empty, the full text field of the course data will set on the read text. After this, the text will be clean with the TextCleaner. The next step is to check the language of the text with the CheckLanguage component. If the language is uncertain, an error text will be set. Otherwise, the TextAbstraction component will calculate the five main sentences. If an error pop up in this process the error text will set on this value. Otherwise, the TextAbstraction will calculate the ten main words of the course data. After this the abstract and word frequency attributes of the course data will be set on the abstracts. The next step is, to check if in the process an error popped up. If an error popped up, the error text of the course data, get the value of the error. After this, the course data will be update in the database and the file will be delete from the “temp” folder by the FileHandler.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Moodle-HTW-DMS’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="GUI_Folder.html"
+                        title="next chapter">GUI folder</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ApplicationLogic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GUI_Folder.html" title="GUI folder"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Moodle-HTW-DMS’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kai Kohl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,923 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DB package &#8212; Moodle-HTW-DMS prototype documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exceptions package" href="Exceptions.html" />
+    <link rel="prev" title="Controller module" href="Controller.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Exceptions.html" title="Exceptions package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Controller.html" title="Controller module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="db-package">
+<h1>DB package<a class="headerlink" href="#db-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-DB.DatabaseManager">
+<span id="db-databasemanager-module"></span><h2>DB.DatabaseManager module<a class="headerlink" href="#module-DB.DatabaseManager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="DB.DatabaseManager.DatabaseManager">
+<em class="property">class </em><code class="descclassname">DB.DatabaseManager.</code><code class="descname">DatabaseManager</code><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DB.IDatabaseManager.IDatabaseManager" title="DB.IDatabaseManager.IDatabaseManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">DB.IDatabaseManager.IDatabaseManager</span></code></a></p>
+<p>Attributes:
+- databasePath (str): The path, where the database will/is stored
+- engine (engine): The engine of the database
+- Sesseion (sessionmaker): For binding the engine for sessions in the future
+- session (Session): A session for transactional communication</p>
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.UpdateCourseDataTextFields">
+<code class="descname">UpdateCourseDataTextFields</code><span class="sig-paren">(</span><em>courseData</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.UpdateCourseDataTextFields" title="Permalink to this definition">¶</a></dt>
+<dd><p>UpdateCourseDataTextFields updates the columns FullText, Abstract, AbstractWordFrequency and Error for the given CourseData</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>courseData</strong> – the course data, which shall be updated</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.UpdateCourseDataWithPositionAndHeader">
+<code class="descname">UpdateCourseDataWithPositionAndHeader</code><span class="sig-paren">(</span><em>courseData</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.UpdateCourseDataWithPositionAndHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>UpdateCourseDataWithPositionAndHeader updates the fields position and header of the  given course data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>courseData</strong> – The course data which shall be updated</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.createTables">
+<code class="descname">createTables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.createTables" title="Permalink to this definition">¶</a></dt>
+<dd><p>The createTables function creates all tables from the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.deleteMoodleError">
+<code class="descname">deleteMoodleError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.deleteMoodleError" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteMoodleError delete all MoodleError from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.deleteUsers">
+<code class="descname">deleteUsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.deleteUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteUsers delete all users from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.deleteloginSuccess">
+<code class="descname">deleteloginSuccess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.deleteloginSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteloginSuccess delete all LoginSuccess from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.doesCourseDataExist">
+<code class="descname">doesCourseDataExist</code><span class="sig-paren">(</span><em>idCourse</em>, <em>link</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.doesCourseDataExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseDataExist check if the data from the course already is stored in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idCourse</strong> – The primary key from the course</li>
+<li><strong>link</strong> – The link, where the data is stored</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns True if the data is already stored. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.doesCourseDataExistWithPositionAndHeader">
+<code class="descname">doesCourseDataExistWithPositionAndHeader</code><span class="sig-paren">(</span><em>idCourse</em>, <em>link</em>, <em>pos</em>, <em>header</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.doesCourseDataExistWithPositionAndHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseDataExistWithPositionAndHeader check if the data is stored with the header and the position from
+the moodle page
+:param idCourse: The primary key from the course
+:param link: The link, where the data is stored
+:param pos: The position on the moodle page
+:param header: The header from the moodle section
+:return Returns True if the data is already stored with this information. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.doesCourseExist">
+<code class="descname">doesCourseExist</code><span class="sig-paren">(</span><em>moodleCourseName</em>, <em>moodleCourseSemester</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.doesCourseExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseExist check if the MoodleCourse already exist in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>moodleCourseName</strong> – The name of the moodle course.</li>
+<li><strong>moodleCourseSemester</strong> – The semester, when the moodle course is.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if a course with this name and semester is already in the database, False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.doesLecturerExist">
+<code class="descname">doesLecturerExist</code><span class="sig-paren">(</span><em>lecturername</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.doesLecturerExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesLecturerExist check if a lecturer with this name already exist in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lecturername</strong> – The name of the lecturer.</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if a lecturer with this name is already in the database, False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.doesLecturerHasCourseExist">
+<code class="descname">doesLecturerHasCourseExist</code><span class="sig-paren">(</span><em>idLecturer</em>, <em>idCourse</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.doesLecturerHasCourseExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesLecturerHasCourseExist check if the lecturer already has the course in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idLecturer</strong> – The primary key from the lecturer</li>
+<li><strong>idCourse</strong> – The primary key from the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if the lecturer has the course in the database. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getAllCourseData">
+<code class="descname">getAllCourseData</code><span class="sig-paren">(</span><em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getAllCourseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>getAllCourseData return all information for course data, which satisfy the filter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> – filter for the consider data (course name, lecturer name or semester).</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformation), which are in the filter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getAllLecturer">
+<code class="descname">getAllLecturer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getAllLecturer" title="Permalink to this definition">¶</a></dt>
+<dd><p>getAllLecturer returns all lecturer from the database.</p>
+<p>:return Returns a list of all lecturers in the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getCourse">
+<code class="descname">getCourse</code><span class="sig-paren">(</span><em>moodleCourseName</em>, <em>moodleCourseSemester</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getCourse" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourse return die MoodleCourse, which has the given name and semester</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>moodleCourseName</strong> – The name of the moodle course.</li>
+<li><strong>moodleCourseSemester</strong> – The semester, when the moodle course is.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return MoodleCourse if in the database is a course with the course name and
+the semester. Otherwise return None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getCourseDataByID">
+<code class="descname">getCourseDataByID</code><span class="sig-paren">(</span><em>idCourseData</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getCourseDataByID" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataByID get the course data by the id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idCourseData</strong> – The primary key from the data of the course</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a CourseData object if the primary key is in the database. None otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getCourseDataByText">
+<code class="descname">getCourseDataByText</code><span class="sig-paren">(</span><em>searchString</em>, <em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getCourseDataByText" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataByText return all information for CourseData, which satisfy the search string and the filter
+for course name, lecturer name or semester.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>searchString</strong> – words, which the user is searching</li>
+<li><strong>filter</strong> – filter for the consider data (course name, lecturer name or semester).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformations), which are in the filter and have the search string in the content of the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getCourseDataWithoutTextMining">
+<code class="descname">getCourseDataWithoutTextMining</code><span class="sig-paren">(</span><em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getCourseDataWithoutTextMining" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataWithoutTextMining return all information for course data, which satisfy the filter
+and had a problem in the text mining process.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param filter:</th><td class="field-body">filter for the consider data (course name, lecturer name or semester).</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformations), which are in the filter
+and had a problem in the text mining process</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getCourseDataWithoutTextMiningForParsing">
+<code class="descname">getCourseDataWithoutTextMiningForParsing</code><span class="sig-paren">(</span><em>fileTypes</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getCourseDataWithoutTextMiningForParsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataWithoutTextMiningForParsing return a
+list of CourseData, which are not parsed and not have any failure in a past parsing process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileTypes</strong> – list of strings types of files, which are for the parsing supported</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a CourseData list with data, which is not parsed and had no failure in a past parsing process</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getGeneralCourseInformation">
+<code class="descname">getGeneralCourseInformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getGeneralCourseInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>getGeneralCourseInformation return all information for the courses.</p>
+<p>:return List of GeneralCourseInformation, like semester, course name and lecturer name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getLecturer">
+<code class="descname">getLecturer</code><span class="sig-paren">(</span><em>lecturername</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getLecturer" title="Permalink to this definition">¶</a></dt>
+<dd><p>getLecturer returns lecturer with the lecturername.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lecturername</strong> – The name of the lecturer.</td>
+</tr>
+</tbody>
+</table>
+<p>:return Lecturer if in the database is a lecturer with the name. Otherwise return None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getLecturerHasCourse">
+<code class="descname">getLecturerHasCourse</code><span class="sig-paren">(</span><em>idLecturer</em>, <em>idCourse</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getLecturerHasCourse" title="Permalink to this definition">¶</a></dt>
+<dd><p>getLecturerHasCourse returns the lecturerHasCourse Object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idLecturer</strong> – The primary key from the lecturer</li>
+<li><strong>idCourse</strong> – The primary key from the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return  Returns LecturerHasCourse object, if the lecturer has the course. None otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getMaxDateOfCrawling">
+<code class="descname">getMaxDateOfCrawling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getMaxDateOfCrawling" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMaxDateOfCrawling return DateOfCrawling object from the last crawling process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return getMaxDateOfCrawling:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Returns a getMaxDateOfCrawling object with the newest timestamp.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getMoodleErrorSummary">
+<code class="descname">getMoodleErrorSummary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getMoodleErrorSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMoodleErrorSummary return all errors, which occured in the last crawling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of MoodleErrorSummary from the last crawling.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getMoodleSummary">
+<code class="descname">getMoodleSummary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getMoodleSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMoodleSummary return a summary from the last crawling. How many new, old and error data per course are
+in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of MoodleSummary (count of new, old and error data per course).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.getUser">
+<code class="descname">getUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>getUser return the user from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return User:</th><td class="field-body">Return the user from the database. If there is no user return None.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.insertObject">
+<code class="descname">insertObject</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.insertObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>insertObject is for inserting a object from the model to the database and commit the insert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> – object from the model, which will be inserted.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.loginSuccessfully">
+<code class="descname">loginSuccessfully</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.loginSuccessfully" title="Permalink to this definition">¶</a></dt>
+<dd><p>loginSuccessfully check if the last login was successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the last login was successfully, False otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.DatabaseManager.DatabaseManager.setCourseDataOnOld">
+<code class="descname">setCourseDataOnOld</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.DatabaseManager.DatabaseManager.setCourseDataOnOld" title="Permalink to this definition">¶</a></dt>
+<dd><p>setCourseDataOnOld update CourseData Table and set all course data to old.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-DB.IDatabaseManager">
+<span id="db-idatabasemanager-module"></span><h2>DB.IDatabaseManager module<a class="headerlink" href="#module-DB.IDatabaseManager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="DB.IDatabaseManager.IDatabaseManager">
+<em class="property">class </em><code class="descclassname">DB.IDatabaseManager.</code><code class="descname">IDatabaseManager</code><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The IDatabaseManager is for the communication with the deposited database
+The functions are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>create all Tables for the model</li>
+<li>check if a object is already stored in the database</li>
+<li>insert object in the database</li>
+<li>get objects from the database</li>
+<li>delete objects from the database</li>
+</ul>
+</div></blockquote>
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.UpdateCourseDataTextFields">
+<code class="descname">UpdateCourseDataTextFields</code><span class="sig-paren">(</span><em>courseData: Model.Model.CourseData</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.UpdateCourseDataTextFields" title="Permalink to this definition">¶</a></dt>
+<dd><p>UpdateCourseDataTextFields updates the columns FullText, Abstract, AbstractWordFrequency and Error for the given CourseData</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>courseData</strong> – the course data, which shall be updated</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.UpdateCourseDataWithPositionAndHeader">
+<code class="descname">UpdateCourseDataWithPositionAndHeader</code><span class="sig-paren">(</span><em>courseData: Model.Model.CourseData</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.UpdateCourseDataWithPositionAndHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>UpdateCourseDataWithPositionAndHeader updates the fields position and header of the  given course data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>courseData</strong> – The course data which shall be updated</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.createTables">
+<code class="descname">createTables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.createTables" title="Permalink to this definition">¶</a></dt>
+<dd><p>The createTables function creates all tables from the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.deleteMoodleError">
+<code class="descname">deleteMoodleError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.deleteMoodleError" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteMoodleError delete all MoodleError from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.deleteUsers">
+<code class="descname">deleteUsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.deleteUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteUsers delete all users from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.deleteloginSuccess">
+<code class="descname">deleteloginSuccess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.deleteloginSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleteloginSuccess delete all LoginSuccess from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.doesCourseDataExist">
+<code class="descname">doesCourseDataExist</code><span class="sig-paren">(</span><em>idCourse: int</em>, <em>link: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.doesCourseDataExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseDataExist check if the data from the course already is stored in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idCourse</strong> – The primary key from the course</li>
+<li><strong>link</strong> – The link, where the data is stored</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns True if the data is already stored. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.doesCourseDataExistWithPositionAndHeader">
+<code class="descname">doesCourseDataExistWithPositionAndHeader</code><span class="sig-paren">(</span><em>idCourse: int</em>, <em>link: str</em>, <em>pos: int</em>, <em>header: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.doesCourseDataExistWithPositionAndHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseDataExistWithPositionAndHeader check if the data is stored with the header and the position from
+the moodle page
+:param idCourse: The primary key from the course
+:param link: The link, where the data is stored
+:param pos: The position on the moodle page
+:param header: The header from the moodle section
+:return Returns True if the data is already stored with this information. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.doesCourseExist">
+<code class="descname">doesCourseExist</code><span class="sig-paren">(</span><em>moodleCourseName: str</em>, <em>moodleCourseSemester: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.doesCourseExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesCourseExist check if the MoodleCourse already exist in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>moodleCourseName</strong> – The name of the moodle course.</li>
+<li><strong>moodleCourseSemester</strong> – The semester, when the moodle course is.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if a course with this name and semester is already in the database, False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.doesLecturerExist">
+<code class="descname">doesLecturerExist</code><span class="sig-paren">(</span><em>lecturername: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.doesLecturerExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesLecturerExist check if a lecturer with this name already exist in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lecturername</strong> – The name of the lecturer.</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if a lecturer with this name is already in the database, False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.doesLecturerHasCourseExist">
+<code class="descname">doesLecturerHasCourseExist</code><span class="sig-paren">(</span><em>idLecturer: int</em>, <em>idCourse: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.doesLecturerHasCourseExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>doesLecturerHasCourseExist check if the lecturer already has the course in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idLecturer</strong> – The primary key from the lecturer</li>
+<li><strong>idCourse</strong> – The primary key from the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return True if the lecturer has the course in the database. False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getAllCourseData">
+<code class="descname">getAllCourseData</code><span class="sig-paren">(</span><em>filter: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getAllCourseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>getAllCourseData return all information for course data, which satisfy the filter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> – filter for the consider data (course name, lecturer name or semester).</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformation), which are in the filter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getAllLecturer">
+<code class="descname">getAllLecturer</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getAllLecturer" title="Permalink to this definition">¶</a></dt>
+<dd><p>getAllLecturer returns all lecturer from the database.</p>
+<p>:return Returns a list of all lecturers in the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getCourse">
+<code class="descname">getCourse</code><span class="sig-paren">(</span><em>moodleCourseName: str</em>, <em>moodleCourseSemester: str</em><span class="sig-paren">)</span> &#x2192; Model.Model.MoodleCourse<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getCourse" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourse return die MoodleCourse, which has the given name and semester</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>moodleCourseName</strong> – The name of the moodle course.</li>
+<li><strong>moodleCourseSemester</strong> – The semester, when the moodle course is.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return MoodleCourse if in the database is a course with the course name and
+the semester. Otherwise return None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getCourseDataByID">
+<code class="descname">getCourseDataByID</code><span class="sig-paren">(</span><em>idCourseData: int</em><span class="sig-paren">)</span> &#x2192; Model.Model.CourseData<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getCourseDataByID" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataByID get the course data by the id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idCourseData</strong> – The primary key from the data of the course</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a CourseData object if the primary key is in the database. None otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getCourseDataByText">
+<code class="descname">getCourseDataByText</code><span class="sig-paren">(</span><em>searchString: str</em>, <em>filter: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getCourseDataByText" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataByText return all information for CourseData, which satisfy the search string and the filter
+for course name, lecturer name or semester.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>searchString</strong> – words, which the user is searching</li>
+<li><strong>filter</strong> – filter for the consider data (course name, lecturer name or semester).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformations), which are in the filter and have the search string in the content of the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getCourseDataWithoutTextMining">
+<code class="descname">getCourseDataWithoutTextMining</code><span class="sig-paren">(</span><em>filter: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getCourseDataWithoutTextMining" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataWithoutTextMining return all information for course data, which satisfy the filter
+and had a problem in the text mining process.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param filter:</th><td class="field-body">filter for the consider data (course name, lecturer name or semester).</td>
+</tr>
+</tbody>
+</table>
+<p>:return List of CourseDataWithInformation (course data and the metainformations), which are in the filter
+and had a problem in the text mining process</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getCourseDataWithoutTextMiningForParsing">
+<code class="descname">getCourseDataWithoutTextMiningForParsing</code><span class="sig-paren">(</span><em>fileTypes: list</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getCourseDataWithoutTextMiningForParsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>getCourseDataWithoutTextMiningForParsing return a
+list of CourseData, which are not parsed and not have any failure in a past parsing process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileTypes</strong> – list of strings types of files, which are for the parsing supported</td>
+</tr>
+</tbody>
+</table>
+<p>:return Returns a CourseData list with data, which is not parsed and had no failure in a past parsing process</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getGeneralCourseInformation">
+<code class="descname">getGeneralCourseInformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getGeneralCourseInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>getGeneralCourseInformation return all information for the courses.</p>
+<p>:return List of GeneralCourseInformation, like semester, course name and lecturer name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getLecturer">
+<code class="descname">getLecturer</code><span class="sig-paren">(</span><em>lecturername: str</em><span class="sig-paren">)</span> &#x2192; Model.Model.Lecturer<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getLecturer" title="Permalink to this definition">¶</a></dt>
+<dd><p>getLecturer returns lecturer with the lecturername.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lecturername</strong> – The name of the lecturer.</td>
+</tr>
+</tbody>
+</table>
+<p>:return Lecturer if in the database is a lecturer with the name. Otherwise return None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getLecturerHasCourse">
+<code class="descname">getLecturerHasCourse</code><span class="sig-paren">(</span><em>idLecturer: int</em>, <em>idCourse: int</em><span class="sig-paren">)</span> &#x2192; Model.Model.LecturerHasCourse<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getLecturerHasCourse" title="Permalink to this definition">¶</a></dt>
+<dd><p>getLecturerHasCourse returns the lecturerHasCourse Object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idLecturer</strong> – The primary key from the lecturer</li>
+<li><strong>idCourse</strong> – The primary key from the course</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>:return  Returns LecturerHasCourse object, if the lecturer has the course. None otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getMaxDateOfCrawling">
+<code class="descname">getMaxDateOfCrawling</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Model.Model.DateOfCrawling<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getMaxDateOfCrawling" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMaxDateOfCrawling return DateOfCrawling object from the last crawling process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return getMaxDateOfCrawling:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Returns a getMaxDateOfCrawling object with the newest timestamp.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getMoodleErrorSummary">
+<code class="descname">getMoodleErrorSummary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getMoodleErrorSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMoodleErrorSummary return all errors, which occured in the last crawling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of MoodleErrorSummary from the last crawling.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getMoodleSummary">
+<code class="descname">getMoodleSummary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getMoodleSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>getMoodleSummary return a summary from the last crawling. How many new, old and error data per course are
+in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of MoodleSummary (count of new, old and error data per course).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.getUser">
+<code class="descname">getUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Model.Model.User<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>getUser return the user from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return User:</th><td class="field-body">Return the user from the database. If there is no user return None.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.insertObject">
+<code class="descname">insertObject</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.insertObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>insertObject is for inserting a object from the model to the database and commit the insert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> – object from the model, which will be inserted.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.loginSuccessfully">
+<code class="descname">loginSuccessfully</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Model.Model.LoginSuccess<a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.loginSuccessfully" title="Permalink to this definition">¶</a></dt>
+<dd><p>loginSuccessfully check if the last login was successfully.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the last login was successfully, False otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DB.IDatabaseManager.IDatabaseManager.setCourseDataOnOld">
+<code class="descname">setCourseDataOnOld</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DB.IDatabaseManager.IDatabaseManager.setCourseDataOnOld" title="Permalink to this definition">¶</a></dt>
+<dd><p>setCourseDataOnOld update CourseData Table and set all course data to old.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-DB">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DB" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DB package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-DB.DatabaseManager">DB.DatabaseManager module</a></li>
+<li><a class="reference internal" href="#module-DB.IDatabaseManager">DB.IDatabaseManager module</a></li>
+<li><a class="reference internal" href="#module-DB">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Controller.html"
+                        title="previous chapter">Controller module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Exceptions.html"
+                        title="next chapter">Exceptions package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/DB.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Exceptions.html" title="Exceptions package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Controller.html" title="Controller module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Moodle-HTW-DMS prototype documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kai Kohl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

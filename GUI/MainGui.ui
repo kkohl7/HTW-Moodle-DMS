@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1545</width>
+    <height>974</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Moodle DMS</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="9">
+     <widget class="QPushButton" name="but_openData">
+      <property name="text">
+       <string>Datei öffnen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="3">
+     <widget class="QTableView" name="tab_courses"/>
+    </item>
+    <item row="1" column="10">
+     <widget class="QPushButton" name="but_saveAllData">
+      <property name="text">
+       <string>Alle Dateien speichern unter</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="but_settings">
+      <property name="maximumSize">
+       <size>
+        <width>170</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Einstellungen</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>14</width>
+        <height>12</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="10">
+     <widget class="QPushButton" name="but_saveData">
+      <property name="text">
+       <string>Datei speichern unter</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="9">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Dateiinhalte</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="10">
+     <widget class="QPushButton" name="but_close">
+      <property name="text">
+       <string>Schließen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="9" colspan="2">
+     <widget class="QPlainTextEdit" name="text_Abstract"/>
+    </item>
+    <item row="0" column="6">
+     <widget class="QPushButton" name="but_withoutTextMiningAll">
+      <property name="text">
+       <string>Zeige Daten ohne Textaufbereitung</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="but_searchCell">
+      <property name="text">
+       <string>Suchen in ausgewählter Zelle</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4" colspan="5">
+     <widget class="QTableView" name="tab_data"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="but_downloadMoodle">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Moodledateien herunterladen</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>14</width>
+        <height>12</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6">
+     <widget class="QPushButton" name="but_searchAll">
+      <property name="text">
+       <string>Suchen in allen Daten</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="9">
+     <widget class="QPushButton" name="but_openAllData">
+      <property name="text">
+       <string>Alle Dateien öffnen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QPushButton" name="but_withoutTextMiningCell">
+      <property name="text">
+       <string>Zeige Daten ohne Textaufbereitung in ausgewählter Zelle</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="but_help">
+      <property name="maximumSize">
+       <size>
+        <width>170</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Hilfe</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>14</width>
+        <height>12</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5" colspan="4">
+     <widget class="QLineEdit" name="line_search">
+      <property name="maximumSize">
+       <size>
+        <width>5000</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Suche</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="but_moodleSummary">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>6</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zusammenfassung letzter Download</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1545</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

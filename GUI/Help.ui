@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPlainTextEdit" name="helpText">
+      <property name="plainText">
+       <string>Guten Tag.
+
+Sie benutzen das Moodle-DMS-Tool von Kai Kohl.
+
+Es ist dafür gedacht, das Leben der Studenten zu vereinfachen, in dem es:
+	- Moodledateien automatisch runterlädt
+	- Moodledateien öffnet
+	- Moodledateien auf Platte speichert
+	- Suche der Datein nach Semester, Dozent, Vorlesung
+	- Suche der Dateien nach Wörtern innerhalb von PDF-, PPTX- und DOCX-Dateien
+	- Inhaltszusammenfassung Moodledateien: PDF, -PPTX und -DOCX
+	
+Nutzunganleitung:
+Hauptseite:
+	Buttons:
+		- &quot;Moodledateien herunterladen&quot; =&gt; Starte den Vorgang des Downloads der Moodledaten. WICHTIG: Sie müssen vorher einen Nutzer bei den Einstellungen hinterlegen
+		- &quot;Einstellungen&quot; =&gt; Speicherort der Moodlezugangsdaten
+		- &quot;Hilfe&quot; =&gt; Anzeige vom Hilfetext
+		- &quot;Moodlezusammenfassung&quot; =&gt; Anzeige der alten, neuen und fehlerhaften Dateien des letzten Moodledownloads 
+		
+		- &quot;Suchen in allen Daten&quot; =&gt; Sucht Dateien, die die Wörter enthalten
+		- &quot;Suchen in ausgewählter Zelle&quot; =&gt; Sucht Dateien, die die Wörter enthalten und den Kursfilter erfüllen
+		
+		- &quot;Zeige Dateien ohne Textaufbereitung&quot; =&gt; Zeigt die PDF-, PPTX-, html- und DOCX-Dateien, bei denen keine Textaufbereitung möglich war
+		- &quot;Zeige Dateien ohne Textaufbereitung in ausgewählter Zelle&quot; =&gt; Zeigt die PDF-, PPTX-, html- und DOCX-Dateien, bei denen keine Textaufbereitung möglich war und die den Kursfilter erfüllen
+		
+		- &quot;Datei öffnen&quot; =&gt; Öffnet die ausgewählte Datei. Die Datei wählen Sie aus, in dem Sie auf die entsprechende Zeile drücken
+		- &quot;Alle Dateien öffnen&quot; =&gt; Öffnet alle Dateien, die in der Tabelle zu sehen sind
+		
+		- &quot;Datei speichern unter&quot; =&gt; Speichert die ausgewählte Datei in einem angegebenen Ordner. Die Datei wählen Sie aus, in dem Sie auf die entsprechende Zeile drücken
+		- &quot;Alle Dateien speichern unter&quot; =&gt; Speichert alle Dateien, die in der Tabelle zu sehen sind, in einem angegebenen Ordner
+		
+		- &quot;Schließen&quot; =&gt; Beendet das Programm
+	
+	Optionen für die Suche nach Dateien:
+		- Um die alle Dateien für eine Vorlesung, Dozent oder Semester zu erhalten, müssen Sie in der linken Tabelle auf die jeweilige Zelle mit der linken Maustaste drücken
+		- Um in Dateien nach bestimmten Wörtern zu suchen, geben Sie im Suchfeld ihre Suchbegriffe ein und drücken sie auf &quot;Suchen&quot;
+		
+		- Drücken auf &quot;Semester&quot; =&gt; Sortiert Kurse nach dem Semester
+		- Drücken auf &quot;Dozent&quot; =&gt; Sortiert Kurse nach dem Dozentennamen
+		- Drücken auf &quot;Kursname&quot; =&gt; Sortiert Kurse nach dem Kurstitel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="but_back">
+      <property name="text">
+       <string>Zurück</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
