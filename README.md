@@ -4,8 +4,8 @@ Dies ist eine Anwendung, die es den Studenten der HTW-Berlin ermöglicht ihre Ku
 ![](MainSide.gif)
 
 
-Used Python-Modules 
-===================
+Genutzte Python-Module 
+======================
 *  PyQt5 https://www.riverbankcomputing.com/software/pyqt/download5 author: Riverbank Computing Limited
 * nltk https://www.nltk.org/ author: Steven Bird
 * sqlalchemy https://www.sqlalchemy.org/ author: Mike Bayer
