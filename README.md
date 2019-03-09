@@ -6,7 +6,7 @@ Dies ist eine Anwendung, die es den Studenten der HTW-Berlin ermöglicht ihre Ku
 Motivation für die Nutzung der Anwendung
 ===============================
 	
-| Mangel                                                                                                        | Ziel                                                                                                                                                                                   |
+| Mangel im aktuellen Moodlesystem                                                                                                       | Ziel                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Hoher Suchaufwand, da Dateien meist unklar benannt sind und sich dadurch der Inhalt nicht erschließt.         | * Ermöglichung der Schlagwortsuche * Ermöglichung der gezielten Suche nach Semester, Dozent oder Vorlesung * Inhaltszusammenfassung der Dateien für pdf, docx, pptx und html-Dokumente |
 | Keine Funktion zum automatischen Herunterladen aller Dateien in Moodle.                                       | * Automatisches herunterladen der Daten aus Moodle                                                                                                                                     |
