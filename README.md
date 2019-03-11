@@ -24,6 +24,24 @@ Angedachte Nutzung
 ===============
 Das Programm ist so angedacht, dass einmal oder mehrfach in einem Semester der Downloadprozess von der Moodleplattform initiiert wird. Dies hat zur Folge, dass der einmalige textuelle Aufbereitungsprozess für jede Datei nicht zu einer längeren Wartezeit führt. Auf diese Art und Weise ist zu erwarten, dass pro Semesterwoche ca. eine Datei pro Kurs hinzukommt und im Durchschnitt sechs Kurse belegt sind. Dies führt zu einer Aufbereitung von ca. sechs Dateien pro Woche. Die benötigte Zeit liegt dann ca. bei sechs Minuten.
 
+Weitere Entwicklungsschritte
+============================
+Refactormaßnahmen des aktuellen Fortschrittes
+* Beseitigung der grafischen Befehle aus MoodleCrawlerHTWBerlin + TextProcessing
+* Beschleunigung der Auslesung von pdf-Dateien (Anpassung FileToText)
+* Auslesen jedes Zeichens aus einer pdf-Datei (Anpassung FileToText)
+
+Neue Funktionalitäten
+* Visualisierungen allgemeiner Statistiken
+* Verwendung von OCR-Erkennung, um Texte aus Bilddateien auszulesen
+* Hinzufügen eigener Kursdateien zu einem Kurs
+* Historisierung der Kursdateien
+* Archivierung der Kursdateien
+* Löschen von Kursdateien
+* Entwicklung und Umsetzung eines Konzeptes zum Umgang mit Moodle-Foren
+* Entwicklung und Umsetzung eines Konzeptes zum Umgang mit Moodle-Wikis
+* Entwicklung und Umsetzung eines Konzeptes zum Umgang mit Moodle-Übungsabgaben
+
 
 
 Genutzte Python-Module 
